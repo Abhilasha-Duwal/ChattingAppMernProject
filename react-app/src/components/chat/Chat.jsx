@@ -7,8 +7,6 @@ import CancelIcon from "@mui/icons-material/Cancel";
 import Message from "../message/Message";
 import ReactScrollToBottom from "react-scroll-to-bottom";
 
-let socket;
-
 const ENDPOINT = process.env.REACT_APP_ENDPOINT;
 console.log("abtest", ENDPOINT)
 
@@ -70,7 +68,7 @@ const Chat = () => {
         socket.off();
       }
     };
-  }, [messages]);
+  }, [messages, socket]);
 
   return (
     <div className="chatPage">
